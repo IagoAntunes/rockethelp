@@ -20,6 +20,7 @@ import {Input} from '../components/Input';
 import {Button} from '../components/Button';
 
 export function SignIn(){
+    const[isLoading, setIsLoading] = useState(false);
     const [email , setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -30,6 +31,27 @@ export function SignIn(){
             return Alert.alert('Entrar', 'Informe e-mail e senha.');
         }
 
+        setIsLoading(true);
+
+        auth().signInWithEmailAndPassword(email ,password)
+        .catch((error)=> {
+            console.log(error);
+            setIsLoading(false);
+
+            if(error.code === 'auth/invalid-email'){
+                return Alert.alert("Entrar",'E-mail invalido');
+            }
+
+            if(error.code === 'auth/wrong-password'){
+                return Alert.alert("Entrar",'E-mail ou senha invalido');
+            }
+
+            if(error.code === 'auth/user-not-found'){
+                return Alert.alert("Entrar",'E-mail ou senha invalido');
+            }
+
+            return Alert.alert('Entrar','Não foi possivel acessar');
+        })
     }
 
 
@@ -53,7 +75,11 @@ export function SignIn(){
             secureTextEntry
             onChangeText={setPassword}
             />
-            <Button title='Entrar' w="full"/>
+            <Button 
+            title='Entrar' 
+            w="full"
+            isLoading={isLoading}
+            />
         </VStack>
     )
 }
