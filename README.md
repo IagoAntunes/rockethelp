@@ -1,6 +1,6 @@
 <br />
 <p align="center">
-
+<img src="https://github.com/IagoAntunes/rockethelp/blob/master/src/assets/RocketHelp.png"/>
 
   <h3 align="center">RocketHelp</h3>
 
@@ -34,7 +34,7 @@
 ---
 
 ## 🎨 Layout
-O layout da aplicação está disponível no Figma:
+O layout da aplicação está disponível no Figma: <br/>
 https://www.figma.com/community/file/1130846653327904117
 
 
@@ -42,9 +42,9 @@ https://www.figma.com/community/file/1130846653327904117
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
--   **[React-Native](https://dotnet.microsoft.com/en-us/apps/xamarin)**
--   **[Expo](https://visualstudio.microsoft.com/pt-br/downloads/)**
--   **[Firebase](https://git-scm.com/)**
+-   **[React-Native](https://reactnative.dev/)**
+-   **[Expo](https://expo.dev/)**
+-   **[Firebase](https://firebase.google.com/?hl=pt)**
 
 ---
 ## 🦸 Autor
